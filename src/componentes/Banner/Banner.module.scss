@@ -1,0 +1,32 @@
+@import "../../styles/variaveis";
+
+.banner {
+    width: 100vw;
+    position: relative;
+    
+    &__imagem {
+        width: 100%;
+        height: 32rem;
+    }
+
+    &__container {
+        position: absolute;
+        top: 5%;
+        left: 0%;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 5rem;
+    }
+
+    &__texto {
+        width: auto;
+        font-size: 1.1rem;
+        color: $branco;
+    }
+
+}
