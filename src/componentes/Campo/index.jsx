@@ -1,11 +1,17 @@
 import React from 'react'
 import styles from './Campo.module.scss'
 
-export default function Campo({label, type='text', placeholder, obrigatorio=false}) {
+export default function Campo({label, type='text', placeholder, valor, aoAlterado, obrigatorio=false}) {
   return (
     <div className={styles.campo}>
         <label>{label}</label>
-        <input type={type} placeholder={placeholder} required={obrigatorio}/>
+        <input 
+          type={type} 
+          value={valor} 
+          onChange={evento => aoAlterado(evento.target.value)}
+          placeholder={placeholder} 
+          required={obrigatorio}           
+        />
     </div>
   )
 }
