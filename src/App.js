@@ -1,12 +1,14 @@
-import Banner from "./componentes/Banner";
-import Campo from "./componentes/Campo";
+import Banner from "componentes/Banner";
+import Formulario from "componentes/Formulario";
+
 import './styles/estilosGlobais.scss';
 
 function App() {
+
   return (
     <div className="App">
       <Banner />
-      <Campo label="Título" type="text" placeholder="Digite o título do livro" obrigatorio={true}/>
+      <Formulario />
     </div>
   );
 }
