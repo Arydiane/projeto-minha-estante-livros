@@ -4,9 +4,11 @@
     text-align: center;
 
     h3 {
+        display: inline-block;
         color: $preto;
         font-size: 1.2rem;
-        border-bottom: 1px solid $preto;
+        border-bottom: 0.3rem solid;
+        margin: 2rem;
     }
 
     &__itens {
@@ -15,6 +17,6 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: stretch;
-        gap: 0.5rem;
+        column-gap: 1rem;
     }
 }
