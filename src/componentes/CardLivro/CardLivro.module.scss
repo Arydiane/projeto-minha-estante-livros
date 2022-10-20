@@ -3,6 +3,17 @@
 .cardLivro {
     width: 20rem;
     margin-bottom: 1rem;
+    position: relative;
+
+    &__excluir {
+        position: absolute;
+        top: -1%;
+        right: -1%;
+
+        :hover {
+            transform: scale(108%);
+        }
+    }
 
     &__cabecalho {
         background-color: $azul-claro;

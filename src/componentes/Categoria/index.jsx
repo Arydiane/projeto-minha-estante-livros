@@ -3,7 +3,7 @@ import styles from './Categoria.module.scss'
 import CardLivro from "componentes/CardLivro";
 import hexToRgba from 'hex-to-rgba';
 
-export default function Categoria({ livros, categoria, aoFavoritar }) {
+export default function Categoria({ livros, categoria, aoFavoritar, aoDeletar }) {
 
     return (
         <div className={styles.categoria} style={{ background: hexToRgba(categoria.cor, '0.3') }}>
@@ -16,6 +16,7 @@ export default function Categoria({ livros, categoria, aoFavoritar }) {
                             livro={livro}
                             corDeFundo={categoria.cor}
                             aoFavoritar={aoFavoritar}
+                            aoDeletar={aoDeletar}
                         />
                     )
                 })}

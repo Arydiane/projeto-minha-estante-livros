@@ -84,6 +84,12 @@ function App() {
     }))
   }
 
+  function deletarLivro(id){
+    setLivros( [...livros.filter( livro => {
+      return livro.id !== id
+    })])
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -100,6 +106,7 @@ function App() {
               livros={livros.filter(livro => livro.categoria === categoria.nome)}
               categoria={categoria}
               aoFavoritar={resolverFavorito}
+              aoDeletar={deletarLivro}
             />
           )})
         }
