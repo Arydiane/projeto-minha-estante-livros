@@ -70,10 +70,9 @@ function App() {
 
   const [livros, setLivros] = useState(livrosInicial)
 
-  // function cadastrarLivro(novoLivro) {
-  //   console.log(novoLivro)
-  //   setLivros([...livros, { ...novoLivro, id: uuidv4() }])
-  // }
+  function cadastrarCategoria(novaCategoria) {
+    setCategorias([...categorias, {...novaCategoria, id: uuidv4() }])
+  }
 
   function resolverFavorito(id){
     setLivros(livros.map( livro => {
@@ -95,6 +94,7 @@ function App() {
       <Banner />
       <Formulario
         aoCadastrar={livro => setLivros([...livros, livro])}
+        aoCadastrarCategoria={cadastrarCategoria}
         categorias={categorias}
       />
       <section>
