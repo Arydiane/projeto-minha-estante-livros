@@ -6,7 +6,7 @@ import hexToRgba from 'hex-to-rgba';
 export default function Categoria({ livros, categoria, aoFavoritar, aoDeletar }) {
 
     return (
-        <div className={styles.categoria} style={{ background: hexToRgba(categoria.cor, '0.3') }}>
+        livros.length > 0 && <section className={styles.categoria} style={{ background: hexToRgba(categoria.cor, '0.3') }}>
             <h3 style={{ borderColor: categoria.cor}}>{categoria.nome}</h3>
             <div className={styles.categoria__itens}>
                 {livros.map((livro, indice) => {
@@ -21,6 +21,6 @@ export default function Categoria({ livros, categoria, aoFavoritar, aoDeletar })
                     )
                 })}
             </div>
-        </div>
+        </section>
     )
 }
