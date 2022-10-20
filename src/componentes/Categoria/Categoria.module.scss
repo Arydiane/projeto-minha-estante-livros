@@ -1,0 +1,20 @@
+@import '../../styles/variaveis'; 
+
+.categoria {
+    text-align: center;
+
+    h3 {
+        color: $preto;
+        font-size: 1.2rem;
+        border-bottom: 1px solid $preto;
+    }
+
+    &__itens {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+}
