@@ -23,6 +23,7 @@ function App() {
   const livrosInicial = [
     {
       id: uuidv4(),
+      favorito: false,
       titulo: "Steve Jobs",
       autor: "Walter Isaacson",
       imagemCapa: "/imagens-capa/steve-jobs.jpeg",
@@ -31,6 +32,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       titulo: " Eu Sou Malala",
       autor: "Malala Yousafzai",
       imagemCapa: "/imagens-capa/eu-sou-malala.jpg",
@@ -39,6 +41,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       titulo: "Bilionários por Acaso - a Criação do Facebook",
       autor: "Ben Mezrich",
       imagemCapa: "/imagens-capa/a-criacao-do-facebook.jpg",
@@ -47,6 +50,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       titulo: "Código Limpo: Habilidades Práticas do Agile Software",
       autor: "Robert C. Martin",
       imagemCapa: "/imagens-capa/codigo-limpo.jpg",
@@ -55,6 +59,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorito: false,
       titulo: "Lógica de Programação e Algoritmos com JavaScript",
       autor: "Edécio Fernando Iepsen",
       imagemCapa: "/imagens-capa/logica-programacao-javascript.jpg",
@@ -69,6 +74,15 @@ function App() {
   //   console.log(novoLivro)
   //   setLivros([...livros, { ...novoLivro, id: uuidv4() }])
   // }
+
+  function resolverFavorito(id){
+    setLivros(livros.map( livro => {
+      if (livro.id === id){
+        livro.favorito = !livro.favorito
+      }
+      return livro
+    }))
+  }
 
   return (
     <div className="App">
@@ -85,6 +99,7 @@ function App() {
               key={indice}
               livros={livros.filter(livro => livro.categoria === categoria.nome)}
               categoria={categoria}
+              aoFavoritar={resolverFavorito}
             />
           )})
         }

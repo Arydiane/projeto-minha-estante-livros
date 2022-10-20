@@ -1,7 +1,17 @@
 import React from 'react'
 import styles from './CardLivro.module.scss'
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 
-export default function CardLivro({ livro, corDeFundo }) {
+export default function CardLivro({ livro, corDeFundo, aoFavoritar }) {
+
+    const favoritar = () =>{
+        aoFavoritar(livro.id)
+    }
+
+    const propsFavorito = {
+        size: 25,
+        onClick: favoritar 
+    }
 
     return (
         <div className={styles.cardLivro}>
@@ -15,6 +25,11 @@ export default function CardLivro({ livro, corDeFundo }) {
                     <span>Resumo: </span>
                     {livro.resumo}
                 </p>
+                <div className={styles.favoritar}>
+                    {livro.favorito 
+                    ? <AiFillHeart {...propsFavorito} color="#FF0000" /> 
+                    : <AiOutlineHeart {...propsFavorito} />}
+                </div>
             </div>
         </div>
     )
