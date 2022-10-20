@@ -1,0 +1,17 @@
+@import "../../styles/variaveis";
+
+.botao {
+    background-color: $azul-escuro;
+    border-radius: 0.625rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    border: none;
+    cursor: pointer;
+    color: $branco;
+    margin: 0.5rem 0;
+
+    &:hover {
+        background-color: $azul-claro;
+    }
+}

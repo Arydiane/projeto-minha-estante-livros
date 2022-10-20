@@ -1,10 +1,11 @@
 import { React, useState } from "react"
 import styles from "./Formulario.module.scss"
+import Botao from "componentes/Botao"
 import Campo from "componentes/Campo"
 import CaixaTexto from "componentes/CaixaTexto"
 import ListaSelecao from "componentes/ListaSelecao"
 
-export default function Formulario() {
+export default function Formulario({aoCadastrar, categorias}) {
 
     const [titulo, setTitulo] = useState('');
     const [autor, setAutor] = useState('');
@@ -12,20 +13,21 @@ export default function Formulario() {
     const [categoria, setCategoria] = useState('');
     const [resumo, setResumo] = useState('');
 
-    let categorias = [
-        {
-            "id": 1,
-            "nome": 'Biografia'
-        },
-        {
-            "id": 2,
-            "nome": 'Tecnologia'
-        }
-    ]
+    const  aoSubmeter = (evento) => {
+        evento.preventDefault()
+        aoCadastrar({titulo, autor, imagemCapa, categoria, resumo}) 
+
+        //limpa os campos do formulário
+        setTitulo('')
+        setAutor('')
+        setImagemCapa('')
+        setCategoria('')
+        setResumo('')
+    }
 
     return (
         <section className={styles.container__formulario}>
-            <form className={styles.formulario}>
+            <form className={styles.formulario} onSubmit={aoSubmeter}>
                 <h2>Preencha os dados do livro para criar o card.</h2>
                 <Campo
                     label="Título"
@@ -64,8 +66,10 @@ export default function Formulario() {
                     valor={resumo}
                     aoAlterado={valor => setResumo(valor)}
                 />
+                <Botao>
+                    Criar card
+                </Botao>
             </form>
-            {console.log(titulo, autor, imagemCapa, categoria, resumo)}
         </section>
     )
 }
