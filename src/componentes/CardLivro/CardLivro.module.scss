@@ -1,0 +1,49 @@
+@import '../../styles/variaveis'; 
+
+.cardLivro {
+    width: 20rem;
+    margin-bottom: 1rem;
+
+    &__cabecalho {
+        background-color: $azul-claro;
+        border-radius: 0.625rem 0.625rem 0 0;
+        text-align: center;
+        padding: 0.5rem;
+
+        h4 {
+            color: $preto;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0.5rem;
+        }
+
+        h5 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $azul-escuro;
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__rodape {
+        background: $branco;
+        box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.08);
+        border-radius: 0 0 0.625rem 0.625rem;
+        padding: 1rem;
+        text-align: center;
+
+        img {
+            width: 6.25rem;
+        }
+
+        p {
+            text-align: justify;
+
+            span {
+                color: $azul-escuro;
+                font-weight: 700;
+            }
+        }
+    }
+}
