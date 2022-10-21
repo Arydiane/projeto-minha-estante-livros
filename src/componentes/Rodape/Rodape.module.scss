@@ -1,0 +1,40 @@
+@import '../../styles/variaveis'; 
+
+.rodape {
+    background-color: $azul-escuro;
+    color: $branco;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        width: 10%;
+
+        img {
+            width: 1.5rem;
+        }
+    }
+
+    &__logo {
+        margin: 0.5rem;
+        height: 4rem;
+    }
+
+    &__texto {
+        font-size: 0.8rem;
+
+        a {
+            color: $branco;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}

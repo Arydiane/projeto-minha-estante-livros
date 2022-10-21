@@ -1,6 +1,7 @@
 import Banner from "componentes/Banner";
 import Categoria from "componentes/Categoria";
 import Formulario from "componentes/Formulario";
+import Rodape from "componentes/Rodape";
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import './styles/estilosGlobais.scss';
@@ -111,6 +112,7 @@ function App() {
           )})
         }
       </section>
+      <Rodape />
     </div>
   );
 }
