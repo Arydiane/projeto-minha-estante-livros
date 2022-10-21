@@ -20,4 +20,9 @@ textarea {
 h1 {
     color: $azul-escuro;
     text-align: center;
+
+    @media (max-width: 768px){
+        margin-top: 2rem;
+        font-size: 1.3rem;
+    }
 }

@@ -14,4 +14,11 @@
     &:hover {
         background-color: $azul-claro;
     }
+
+    @media (max-width: 768px){
+        font-size: 1rem;
+        padding: 1rem;
+        display: block;
+        margin: 0 auto;
+    }
 }

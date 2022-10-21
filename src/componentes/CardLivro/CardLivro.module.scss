@@ -1,9 +1,13 @@
 @import '../../styles/variaveis'; 
 
 .cardLivro {
-    width: 20rem;
+    max-width: 20rem;
     margin-bottom: 1rem;
     position: relative;
+
+    @media (max-width: 768px){
+        width: 80%;
+    }
 
     &__excluir {
         position: absolute;
