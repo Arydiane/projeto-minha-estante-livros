@@ -6,6 +6,7 @@ export default function ListaSelecao({label, valor, aoAlterado,  itens, obrigato
     <div className={styles.listaSelecao}>
         <label>{label}</label>
         <select required={obrigatorio} value={valor} onChange={evento => aoAlterado(evento.target.value)}>
+            <option></option>
             {itens.map(item => <option key={item.id}>{item.nome}</option>)}
         </select>
     </div>
