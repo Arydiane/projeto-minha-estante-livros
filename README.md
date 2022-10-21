@@ -5,6 +5,7 @@ O site Minha Estante de Livros permite organizar todos os livros lidos pelo usu�
 <p><strong>O objetivo do projeto é praticar os seguintes conceitos:</strong> 
 
 - Implementar componentes da interface do usuário com estado
+- Componentes Controlados
 - Utilizar o CSS modules e o Sass
 - Absolute imports
 
