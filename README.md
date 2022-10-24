@@ -24,3 +24,8 @@ As tecnologias usadas foram:
 * React
 * JavaScript
 * Sass
+
+## 🛠️ Abrir e rodar o projeto
+Para abrir e rodar o projeto, execute npm i para instalar as dependências e npm start para inicar o projeto.
+
+Depois, acesse http://localhost:3000/ no seu navegador.
