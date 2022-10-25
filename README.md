@@ -5,6 +5,7 @@ O site Minha Estante de Livros permite organizar todos os livros lidos pelo usu�
 <p><strong>O objetivo do projeto é praticar os seguintes conceitos:</strong> 
 
 - Implementar componentes da interface do usuário com estado
+- Componentes Controlados
 - Utilizar o CSS modules e o Sass
 - Absolute imports
 
@@ -23,3 +24,8 @@ As tecnologias usadas foram:
 * React
 * JavaScript
 * Sass
+
+## 🛠️ Abrir e rodar o projeto
+Para abrir e rodar o projeto, execute npm i para instalar as dependências e npm start para inicar o projeto.
+
+Depois, acesse http://localhost:3000/ no seu navegador.
