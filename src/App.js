@@ -5,6 +5,7 @@ import Rodape from "componentes/Rodape";
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import './styles/estilosGlobais.scss';
+import btnIcone from 'imagens/btn-icone.png';
 
 function App() {
 
@@ -71,6 +72,12 @@ function App() {
 
   const [livros, setLivros] = useState(livrosInicial)
 
+  const [exibicaoFormulario, setExibicaoFormulario] = useState(false)
+
+  function alteraExibicaoFormulario() {
+    setExibicaoFormulario(!exibicaoFormulario)
+  }
+
   function cadastrarCategoria(novaCategoria) {
     setCategorias([...categorias, {...novaCategoria, id: uuidv4() }])
   }
@@ -97,9 +104,20 @@ function App() {
         aoCadastrar={livro => setLivros([...livros, livro])}
         aoCadastrarCategoria={cadastrarCategoria}
         categorias={categorias}
+        exibicaoFormulario={exibicaoFormulario}
       />
       <section>
-        <h1>Minha Estante de Livros</h1>
+        <div className="titulo__container">
+          <h1>Minha Estante de Livros</h1>
+          <button 
+            className="btn__exibirFormulario" 
+            onClick={alteraExibicaoFormulario} 
+            title={ exibicaoFormulario ? "Ocultar formulário" : "Exibir formulário"}
+          >
+            <img src={btnIcone} alt="Exibe formulário"/>
+          </button>
+        </div>
+
         {categorias.map((categoria, indice) => {
           return (
             <Categoria

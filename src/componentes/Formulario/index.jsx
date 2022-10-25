@@ -5,7 +5,7 @@ import Campo from "componentes/Campo"
 import CaixaTexto from "componentes/CaixaTexto"
 import ListaSelecao from "componentes/ListaSelecao"
 
-export default function Formulario({aoCadastrar, categorias, aoCadastrarCategoria}) {
+export default function Formulario({aoCadastrar, categorias, aoCadastrarCategoria, exibicaoFormulario}) {
 
     const [titulo, setTitulo] = useState('');
     const [autor, setAutor] = useState('');
@@ -37,7 +37,7 @@ export default function Formulario({aoCadastrar, categorias, aoCadastrarCategori
     }
 
     return (
-        <section className={styles.container__formulario}>
+        <section className={ exibicaoFormulario ? `${styles.container__formulario}` : `${styles.container__formulario} ${styles.invisivel}` }>
             <form className={styles.formulario} onSubmit={aoSubmeterCard}>
                 <h2>Preencha os dados do livro para criar o card.</h2>
                 <Campo

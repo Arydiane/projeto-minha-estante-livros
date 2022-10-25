@@ -26,3 +26,29 @@ h1 {
         font-size: 1.3rem;
     }
 }
+
+.titulo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    padding: 0.5rem;
+}
+
+.btn__exibirFormulario {
+    background-color: $azul-escuro;
+    border: none;
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $azul-claro;
+    }
+
+    img {
+        width: 100%;
+    }
+}
